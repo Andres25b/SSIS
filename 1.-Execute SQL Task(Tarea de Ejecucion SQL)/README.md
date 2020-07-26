@@ -69,7 +69,9 @@ La tarea es especialmente útil para devolver conjuntos de resultados que luego 
 
 <div style="text-align: center">
 
-![Resultado Final - Tarea Ejecutar SQL](https://raw.githubusercontent.com/Andres25b/SSIS/master/Anexos/1.-TareaEjecutarSQL.png) "Resultado Final - Tarea Ejecutar SQL"
+![Resultado Final - Tarea Ejecutar SQL](https://raw.githubusercontent.com/Andres25b/SSIS/master/Anexos/1.-TareaEjecutarSQL.png "Resultado Final - Tarea Ejecutar SQL")
+
+"Resultado Final - Tarea Ejecutar SQL"
 
 </div>
 
