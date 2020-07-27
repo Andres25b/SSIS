@@ -11,8 +11,8 @@
   DTS:LocaleID="2058"
   DTS:ObjectName="4 Tarea Ejecutar Proceso"
   DTS:PackageType="5"
-  DTS:VersionBuild="6"
-  DTS:VersionGUID="{B0B7CEB7-D3A1-43F0-A3D5-FEB76518C1FD}">
+  DTS:VersionBuild="7"
+  DTS:VersionGUID="{ED761252-9AF1-4A82-A874-02013F606606}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -81,21 +81,21 @@
         <NodeLayout
           Size="192,42"
           Id="Package\Eliminar Reporte Cliente"
-          TopLeft="237,160" />
+          TopLeft="232,142" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Restricción]"
-          TopLeft="329.5,104">
+          TopLeft="327,104">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,56"
+              EndConnector="0,38"
               Start="0,0"
-              End="0,48.5">
+              End="0,30.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,48.5" />
+                    End="0,30.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
