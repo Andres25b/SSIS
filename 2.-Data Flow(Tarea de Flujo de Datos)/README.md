@@ -14,7 +14,7 @@ La adición de una tarea de flujo de datos a un flujo de control de paquete hace
 
 ### **Ejercicio:**
 
-1. Se desea exportar de la base de datos **NORTHWND** la tabla **Customers** a un archivo con el nombre  Reporte Clientes.txt.
+<b>1.</b> Se desea exportar de la base de datos **NORTHWND** la tabla **Customers** a un archivo con el nombre  Reporte Clientes.txt.
 
 ##### Configuración de la herramienta Tarea de flujo de datos.
 * Arrastramos al flujo de control la herramienta **'Tarea flujo de datos'**.
@@ -50,7 +50,19 @@ La adición de una tarea de flujo de datos a un flujo de control de paquete hace
 * Podemos permitir o no que los dato se sobrescriban cuando se ejecute la tarea.
 * Damos click en aceptar para terminar.
 
-    
+<b>2.</b> Diariamente la gerencia necesita el reporte de los clientes que se encuentran en la base de datos SQL Server, también se requiere que se deposite el reporte en una ruta especifica y el nombre del archivo tiene que estar con la fecha que se genera dicho reporte. Cabe señalar que la elaboración del reporte debe ejecutarse de manera automática de manera diaria.(**NOTA:** Usa de base el ejercicio anterior)
+
+* Creamos dos variables.
+    | Nombre      | Ambito                | Tipo de dato| Valor                               | Expresión                                     |
+    | :---------- | :-------------------- | :-----------|:-------------------------------------|:----------------------------------------------|
+    |NombreArchivo| 2 Tarea Flujo De Datos| String      | Reporte Cliente                      |                                               | 
+    |Ruta         | 2 Tarea Flujo De Datos| String      | C:\SQL Service Integration Services\ |                                               | 
+    |FechaSistema | 2 Tarea Flujo De Datos| String      | Fecha es automatica                  | `SUBSTRING( (DT_WSTR, 90)  GETDATE(), 1, 10 )`|
+* Seleccionamos **Reporte Cliente**, el cual se encuentra ubicado en el panel de administracion de conexiones.
+* Damos click derecho sobre dicha conexión y seleccionamos propiedades.
+* Seleccionamos en el panel de propiedades el apartado de **Expressions**.
+* Le asignamos como propiedad **'ConnectionString'** y como Expresión: `@[User::Ruta]+ @[User::NombreArchivo]+ @[User::FechaSistema]+".txt"`
+
 
 #### **Resultado Final:**
 
@@ -61,8 +73,3 @@ La adición de una tarea de flujo de datos a un flujo de control de paquete hace
 "Resultado Final - Conexion del origen y el destino"
 
 </div>
-
-
-
-
-
